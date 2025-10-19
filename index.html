@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWeb - Создание сайтов под ключ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Шапка -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-code text-2xl mr-2"></i>
+                    <h1 class="text-2xl font-bold">CyberWeb</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="nav-link">Услуги</a>
+                    <a href="#portfolio" class="nav-link">Портфолио</a>
+                    <a href="#process" class="nav-link">Как мы работаем</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Мобильное меню -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#services" class="block py-2">Услуги</a>
+                <a href="#portfolio" class="block py-2">Портфолио</a>
+                <a href="#process" class="block py-2">Как мы работаем</a>
+                <a href="#contacts" class="block py-2">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Профессиональное создание сайтов под ключ</h2>
+                <p class="text-xl mb-8">От визитки до интернет-магазина - разрабатываем сайты, которые приносят прибыль и выделяют вас среди конкурентов.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contacts" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-center hover-scale">Заказать сайт</a>
+                    <a href="#portfolio" class="border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold text-center hover-scale">Посмотреть работы</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png" alt="Разработка сайтов" class="w-full max-w-md rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Наши услуги</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Мы предлагаем полный спектр услуг по созданию и продвижению сайтов для бизнеса любого масштаба.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Карточка 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Лендинги</h3>
+                    <p class="text-gray-600">Одностраничные сайты для эффективного продвижения товаров и услуг. Идеально подходят для рекламных кампаний.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Адаптивный дизайн</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Высокая конверсия</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Интеграция с CRM</li>
+                    </ul>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Интернет-магазины</h3>
+                    <p class="text-gray-600">Полнофункциональные платформы для онлайн-продаж с удобной административной панелью и платежными системами.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Каталог товаров</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Корзина и оформление</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Личный кабинет</li>
+                    </ul>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Корпоративные сайты</h3>
+                    <p class="text-gray-600">Представительские сайты компаний с детальным описанием услуг, портфолио и контактной информацией.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Многостраничная структура</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Новостной раздел</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Формы обратной связи</li>
+                    </ul>
+                </div>
+                
+                <!-- Карточка 4 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Мобильные приложения</h3>
+                    <p class="text-gray-600">Разработка кроссплатформенных мобильных приложений для iOS и Android, синхронизированных с вашим сайтом.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Нативные и гибридные приложения</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Push-уведомления</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Интеграция с API</li>
+                    </ul>
+                </div>
+                
+                <!-- Карточка 5 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search-dollar text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">SEO-продвижение</h3>
+                    <p class="text-gray-600">Комплексное продвижение сайтов в поисковых системах для привлечения целевого трафика и увеличения продаж.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Аудит сайта</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ключевые слова</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Контент-маркетинг</li>
+                    </ul>
+                </div>
+                
+                <!-- Карточка 6 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md hover-scale">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Техническая поддержка</h3>
+                    <p class="text-gray-600">Постоянное сопровождение и обслуживание сайтов, обновление контента, резервное копирование и защита.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Мониторинг работы</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Обновления CMS</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Консультации</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Наши работы</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Примеры реализованных проектов для клиентов из различных сфер бизнеса.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Проект 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <img src="https://cdn.pixabay.com/photo/2015/05/31/13/45/young-791849_1280.jpg" alt="Интернет-магазин одежды" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Интернет-магазин одежды</h3>
+                        <p class="text-gray-600 mb-4">Полнофункциональный магазин с каталогом из 500+ товаров, фильтрами и системой скидок.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">WordPress</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">WooCommerce</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">Адаптивный дизайн</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <img src="https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_1280.jpg" alt="Корпоративный сайт строительной компании" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Строительная компания</h3>
+                        <p class="text-gray-600 mb-4">Представительский сайт с портфолио объектов, калькулятором услуг и системой заявок.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">TailwindCSS</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">Многостраничный</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
+                    <img src="https://cdn.pixabay.com/photo/2015/05/31/12/14/ipad-791217_1280.jpg" alt="Лендинг для курсов" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Лендинг онлайн-курсов</h3>
+                        <p class="text-gray-600 mb-4">Высококонверсионная страница с формой записи, таймером и отзывами.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#contacts" class="inline-block gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover-scale">Заказать аналогичный проект</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Как мы работаем</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Четкий алгоритм взаимодействия гарантирует качественный результат в оговоренные сроки.</p>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_1280.jpg" alt="Процесс работы" class="w-full max-w-md rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="space-y-8">
+                        <!-- Шаг 1 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center gradient-bg text-white rounded-full w-12 h-12 font-bold text-xl">1</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold mb-2">Заявка и консультация</h3>
+                                <p class="text-gray-600">Вы оставляете заявку, мы связываемся с вами для уточнения деталей и предлагаем оптимальное решение.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Шаг 2 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center gradient-bg text-white rounded-full w-12 h-12 font-bold text-xl">2</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold mb-2">Техническое задание</h3>
+                                <p class="text-gray-600">Составляем подробное ТЗ, согласовываем сроки и бюджет, подписываем договор.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Шаг 3 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center gradient-bg text-white rounded-full w-12 h-12 font-bold text-xl">3</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold mb-2">Дизайн и разработка</h3>
+                                <p class="text-gray-600">Создаем дизайн-макет, утверждаем его с вами и приступаем к программированию функционала.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Шаг 4 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center gradient-bg text-white rounded-full w-12 h-12 font-bold text-xl">4</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold mb-2">Тестирование и сдача</h3>
+                                <p class="text-gray-600">Проводим тестирование, обучаем работе с сайтом, переносим на хостинг и сдаем проект.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 rounded-xl p-8 md:p-12 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-6">Гарантии качества</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-4xl gradient-text mb-4" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                        <h4 class="font-bold mb-2">Гарантия 1 год</h4>
+                        <p class="text-gray-600">Исправляем любые недочеты в течение года после сдачи проекта.</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-lock text-4xl gradient-text mb-4" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                        <h4 class="font-bold mb-2">Конфиденциальность</h4>
+                        <p class="text-gray-600">Все данные защищены NDA, исходные коды передаются вам.</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-headset text-4xl gradient-text mb-4" style="background: linear-gradient(135deg, #6e8efb 0%, #4a6cf7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                        <h4 class="font-bold mb-2">Поддержка 24/7</h4>
+                        <p class="text-gray-600">Круглосуточная техническая поддержка по любым вопросам.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Свяжитесь с нами</h2>
+            <p class="text-gray-300 text-center max-w-2xl mx-auto mb-12">Готовы обсудить ваш проект или ответить на любые вопросы. Оставьте заявку, и мы свяжемся с вами в течение часа.</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Ваше имя</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="example@mail.ru">
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2 font-medium">Телефон</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+7 (900) 123-45-67">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Сообщение</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Опишите ваш проект..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">Отправить заявку</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Контактная информация</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-blue-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <a href="mailto:ooo.cyber@mail.ru" class="text-blue-400 hover:underline">ooo.cyber@mail.ru</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Телефон</h4>
+                                    <a href="tel:89006602949" class="text-blue-400 hover:underline">8 (900) 660-29-49</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Режим работы</h4>
+                                    <p class="text-gray-300">Пн-Пт: 9:00 - 18:00</p>
+                                    <p class="text-gray-300">Сб-Вс: выходной</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold mb-1">Адрес</h4>
+                                    <p class="text-gray-300">Россия, г. Москва, ул. Примерная, д. 123</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Мы в соцсетях</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-code text-xl mr-2 text-blue-400"></i>
+                        <span class="text-white font-bold">CyberWeb</span>
+                    </div>
+                    <p class="text-sm mt-2">Профессиональное создание сайтов под ключ</p>
+                </div>
+                
+                <div class="text-sm">
+                    <p>© 2023 CyberWeb. Все права защищены.</p>
+                    <p class="mt-1">ИНН: 1234567890, ОГРН: 1234567890123</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Закрываем мобильное меню после клика
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Анимация при скролле
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hover-scale').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
